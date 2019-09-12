@@ -5,11 +5,8 @@ services:
         restart: always
         build: ./skel-python-service/
         volumes:
-            - ./config:/etc/skel-python-service
             - ./log:/usr/src/app/log
         ports:
             - "5000:5000"
         environment:
             - DEBUG=1
-        working_dir: /usr/src/app
-        command: python app.py

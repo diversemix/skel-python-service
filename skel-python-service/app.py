@@ -26,11 +26,11 @@ def create_app():
     with open(SERVICE_CONFIG) as data_file:
         _app.service_config = json.load(data_file)
 
-    print json.dumps(_app.config,
+    print(json.dumps(_app.config,
                     sort_keys=True,
                     indent=4,
                     default=str,
-                    separators=(',', ': '))
+                    separators=(',', ': ')))
 
     return _app
 
